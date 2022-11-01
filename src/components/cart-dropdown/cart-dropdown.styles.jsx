@@ -1,3 +1,9 @@
+import styled from 'styled-components';
+
+export const CartDropdownContainer = styled.div`
+
+` 
+
 .cart-dropdown-container {
     position: absolute;
     width: 240px;
