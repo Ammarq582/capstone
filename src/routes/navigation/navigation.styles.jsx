@@ -23,7 +23,7 @@ align-items: center;
 justify-content: flex-end;
 `
 
-export const NavLink = styled(Link)`
+export const StyledNavLink = styled(Link)`
 padding: 10px 15px;
 cursor: pointer;
 `
