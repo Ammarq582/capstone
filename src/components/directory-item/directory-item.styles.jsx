@@ -6,6 +6,7 @@ width: 100%;
 height: 100%;
 background-size: cover;
 background-position: center;
+background-image: ${({imageUrl}) => `url(${imageUrl})`}
 `
 
 export const BodyContainer = styled.div`
@@ -26,7 +27,7 @@ h2 {
   margin: 0 6px 0;
   font-size: 22px;
   color: #4a4a4a;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 p {

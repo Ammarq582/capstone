@@ -1,4 +1,13 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const subColor = 'grey';
+const mainColor = 'black';
+
+const shrinkLabelStyles = css`
+top: -14px;
+font-size: 12px;
+color: ${mainColor};
+`
 
 export const Group = styled.div`
 position: relative;
@@ -10,7 +19,7 @@ input[type='password'] {
 `
 
 export const GroupLabel = styled.label`
-color: grey;
+color: ${subColor};
 font-size: 16px;
 font-weight: normal;
 position: absolute;
@@ -18,12 +27,14 @@ pointer-events: none;
 left: 5px;
 top: 10px;
 transition: 300ms ease all;
+
+${({shrink}) => shrink && shrinkLabelStyles};
 `
 
 export const GroupInput = styled.input`
 background: none;
 background-color: white;
-color: grey;
+color: ${subColor};
 font-size: 18px;
 padding: 10px 10px 10px 5px;
 display: block;
@@ -38,20 +49,6 @@ margin: 25px 0;
 }
 
 &:focus ~ ${GroupLabel} {
-  top: -14px;
-  font-size: 12px;
-  color: black;
+  ${shrinkLabelStyles}
 }
 `
-
-export const ShrinkLabel = styled.label`
-font-weight: normal;
-position: absolute;
-pointer-events: none;
-left: 5px;
-transition: 300ms ease all;
-top: -14px;
-font-size: 12px;
-color: black;
-`
-

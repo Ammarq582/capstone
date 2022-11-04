@@ -31,7 +31,6 @@ const SignInForm = () => {
     }
 
     const onSubmitHandler = async (event) => {
-        console.log('run submit');
         event.preventDefault();
         try {
             const {user} = await signInAuthUserWithEmailAndPassword(email, password);
